@@ -1,0 +1,6 @@
+---
+- hosts: local
+
+  roles:
+    - test1
+    - test2

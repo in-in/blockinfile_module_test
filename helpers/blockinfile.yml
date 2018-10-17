@@ -1,0 +1,9 @@
+---
+- name: helper | blockinfile | add text block to the file
+  blockinfile:
+    create: yes
+    state: present
+    marker: '# {mark}'
+    marker_begin: "roles: {{ role_name }}"
+    path: '{{ playbook_dir }}/result.txt'
+    block: "{{ lookup('template', 'result') }}"
